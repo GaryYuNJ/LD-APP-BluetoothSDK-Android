@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manufacturers>
+    <!-- 立方  -->
+    <manufacturer name="0">
+        <bean type-id="1" class="com.example.ldsdk_xh.interfaces.impl.lf.LFDoorImpl"></bean>
+        <bean type-id="2" class="com.example.ldsdk_xh.interfaces.impl.lf.LFElevatorImpl"></bean>
+        <bean type-id="3" class="com.example.ldsdk_xh.interfaces.impl.lf.LFEscalatorImpl"></bean>
+        <bean id="service" class="cn.com.reformer.rfBleService.BleService"></bean>
+        <bean name="bleutil" class="com.example.ldsdk_xh.interfaces.impl.lf.LFBleUtilsImpl"></bean>
+    </manufacturer>
+    
+    <!-- 特斯联 -->
+    <manufacturer name="1">
+        <bean type-id="1" class="com.example.ldsdk_xh.interfaces.impl.tsl.TSLDoorImpl"></bean>
+        <bean type-id="4" class="com.example.ldsdk_xh.interfaces.impl.tsl.TSLGroundLockImpl"></bean>
+        <bean name="bleutil" class="com.example.ldsdk_xh.interfaces.impl.tsl.TSLBleUtilsImpl"></bean>
+    </manufacturer>
+</manufacturers>
