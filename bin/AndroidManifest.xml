@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ldsdk_xh"
+    package="com.greenland.btsdk"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="18"
         android:targetSdkVersion="26" />
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
-    
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>   
-	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>  
 
-	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -23,16 +23,13 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="TERMINUS_APPKEY"
-            android:value="50a02eac39a4ebf769b791ad9d6c91c0"/>
-<!--         <meta-data
-            android:name="TERMINUS_APPKEY"
-            android:value="55fe0451d0a24381929e226f5b48a965" /> -->
+            android:value="50a02eac39a4ebf769b791ad9d6c91c0" />
         <meta-data
             android:name="TERMINUS_OPENID"
             android:value="4a24d18509a841ca8ef50bd9e0f5f4a7" />
-        
+
         <activity
-            android:name="com.example.ldsdk_xh.view.MainActivity"
+            android:name="com.greenland.btsdk.view.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +37,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service android:name="cn.com.reformer.rfBleService.BleService" />
-        <service android:name="com.example.ldsdk_xh.service.TSLService" />
+        <service android:name=".service.TSLService" />
+
+        <activity
+            android:name="com.greenland.btsdk.view.KeyListActivity"
+            android:label="@string/title_activity_key_list" >
+        </activity>
     </application>
 
 </manifest>

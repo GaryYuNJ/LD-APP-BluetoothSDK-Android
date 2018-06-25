@@ -14,4 +14,6 @@
     <string name="search_complete">蓝牙搜索完毕</string>
     <string name="operate_status">操作状态：</string>
     <string name="no_status">暂无状态</string>
+    <string name="title_activity_key_list">用户钥匙列表</string>
+
 </resources>
